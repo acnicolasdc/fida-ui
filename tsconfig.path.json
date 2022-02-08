@@ -3,7 +3,15 @@
         "baseUrl": "./src",
         "paths": {
             "@components": ["components"],
-            "@components/*": ["components/*"]
+            "@components/*": ["components/*"],
+            "@containers": ["containers"],
+            "@containers/*": ["containers/*"],
+            "@pages": ["pages"],
+            "@pages/*": ["pages/*"],
+            "@providers": ["providers"],
+            "@providers/*": ["providers/*"],
+            "@routes": ["routes"],
+            "@routes/*": ["routes/*"]
         }
     }
 }

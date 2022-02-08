@@ -1,8 +1,6 @@
-import Test from '@components/Test'
+import Routes from '@routes'
 import './App.less'
 
-function App() {
-    return <Test />
+export default function App() {
+    return <Routes />
 }
-
-export default App
