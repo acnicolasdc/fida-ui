@@ -1,32 +1,20 @@
-import {
-    BrowserRouter,
-    Routes as Switch,
-    Route,
-    Link,
-    Outlet,
-} from 'react-router-dom'
+import { BrowserRouter, Routes as Switch, Route } from 'react-router-dom'
 import Default from '@pages/Default'
 import SignIn from '@pages/SignIn'
+
+export enum EPaths {
+    signIn = '/',
+    forgotPassword = 'forgot-password',
+    requestAccess = 'request-access',
+}
 
 export default function Routes() {
     return (
         <BrowserRouter>
-            <div>
-                <h1>Bookkeeper</h1>
-                <nav
-                    style={{
-                        borderBottom: 'solid 1px',
-                        paddingBottom: '1rem',
-                    }}
-                >
-                    <Link to="/hola">Invoices</Link> |{' '}
-                    <Link to="/expenses">Expenses</Link>
-                </nav>
-                <Outlet />
-            </div>
             <Switch>
-                <Route path="/" element={<Default />} />
-                <Route path="hola" element={<SignIn />} />
+                <Route path={EPaths.signIn} element={<SignIn />} />
+                <Route path={EPaths.forgotPassword} element={<Default />} />
+                <Route path={EPaths.requestAccess} element={<Default />} />
                 <Route
                     path="*"
                     element={
