@@ -1,8 +1,25 @@
+import { Link } from 'react-router-dom'
+import { EPaths } from '@routes'
+import Auth from '@containers/Auth'
+import { SubTitle, Text } from '@components/Typography'
+import { Container, ContentForm, Logo } from './signIn.style'
+
 function SignIn() {
     return (
-        <div style={{ width: '100%', height: '100%', background: 'blue' }}>
-            <h1>SIGN IN</h1>
-        </div>
+        <Container>
+            <Logo />
+            <ContentForm>
+                <SubTitle>Welcome Back!</SubTitle>
+                <Text>
+                    New in Fidaboard?{' '}
+                    <Link to={EPaths.requestAccess}>Request access</Link>
+                </Text>
+                <Auth />
+                <Text>
+                    <Link to={EPaths.forgotPassword}>Forgot Password?</Link>
+                </Text>
+            </ContentForm>
+        </Container>
     )
 }
 
