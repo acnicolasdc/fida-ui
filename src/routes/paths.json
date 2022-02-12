@@ -1,0 +1,6 @@
+{
+    "signIn": "sign-in",
+    "forgotPassword": "forgot-password",
+    "requestAccess": "request-access",
+    "dashboard": "/"
+}

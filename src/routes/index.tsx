@@ -1,20 +1,42 @@
 import { BrowserRouter, Routes as Switch, Route } from 'react-router-dom'
 import Default from '@pages/Default'
 import SignIn from '@pages/SignIn'
+import Dashboard from '@pages/Dashboard'
+import NavigationBar from '@components/Layout/NavigationBar'
+import PrivateRoute from './components/PrivateRoute'
+import PublicRoute from './components/PublicRoute'
+import PrivateComponent from './components/PrivateComponent'
 
-export enum EPaths {
-    signIn = '/',
-    forgotPassword = 'forgot-password',
-    requestAccess = 'request-access',
-}
+import paths from './paths.json'
 
+export const EPaths = paths
 export default function Routes() {
     return (
         <BrowserRouter>
+            <PrivateComponent>
+                <NavigationBar />
+            </PrivateComponent>
             <Switch>
-                <Route path={EPaths.signIn} element={<SignIn />} />
-                <Route path={EPaths.forgotPassword} element={<Default />} />
-                <Route path={EPaths.requestAccess} element={<Default />} />
+                <Route
+                    path={paths.dashboard}
+                    element={
+                        <PrivateRoute>
+                            <Dashboard />
+                        </PrivateRoute>
+                    }
+                />
+                <Route
+                    path={paths.signIn}
+                    element={
+                        <PublicRoute restricted>
+                            <SignIn />
+                        </PublicRoute>
+                    }
+                >
+                    <Route path={paths.forgotPassword} element={<Default />} />
+                    <Route path={paths.requestAccess} element={<Default />} />
+                </Route>
+
                 <Route
                     path="*"
                     element={
