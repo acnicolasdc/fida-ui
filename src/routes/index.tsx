@@ -2,6 +2,9 @@ import { BrowserRouter, Routes as Switch, Route } from 'react-router-dom'
 import Default from '@pages/Default'
 import SignIn from '@pages/SignIn'
 import Dashboard from '@pages/Dashboard'
+import NotificationDropdown from '@containers/UserNotificationDropdown'
+import UserDropdownMenu from '@containers/UserDropdownMenu'
+import UserNavigationMenu from '@containers/UserNavigationMenu'
 import NavigationBar from '@components/Layout/NavigationBar'
 import PrivateRoute from './components/PrivateRoute'
 import PublicRoute from './components/PublicRoute'
@@ -14,7 +17,13 @@ export default function Routes() {
     return (
         <BrowserRouter>
             <PrivateComponent>
-                <NavigationBar />
+                <NavigationBar
+                    extra={[
+                        <UserNavigationMenu key="3" />,
+                        <NotificationDropdown key="1" />,
+                        <UserDropdownMenu key="2" />,
+                    ]}
+                />
             </PrivateComponent>
             <Switch>
                 <Route
