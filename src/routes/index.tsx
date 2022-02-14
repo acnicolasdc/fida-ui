@@ -1,10 +1,11 @@
 import { BrowserRouter, Routes as Switch, Route } from 'react-router-dom'
+import Offer from '@pages/Offer'
 import Default from '@pages/Default'
 import SignIn from '@pages/SignIn'
 import Dashboard from '@pages/Dashboard'
-import NotificationDropdown from '@containers/UserNotificationDropdown'
-import UserDropdownMenu from '@containers/UserDropdownMenu'
-import UserNavigationMenu from '@containers/UserNavigationMenu'
+import NotificationDropdown from '@containers/User/UserNotificationDropdown'
+import UserDropdownMenu from '@containers/User/UserDropdownMenu'
+import UserNavigationMenu from '@containers/User/UserNavigationMenu'
 import NavigationBar from '@components/Layout/NavigationBar'
 import PrivateRoute from './components/PrivateRoute'
 import PublicRoute from './components/PublicRoute'
@@ -31,6 +32,14 @@ export default function Routes() {
                     element={
                         <PrivateRoute>
                             <Dashboard />
+                        </PrivateRoute>
+                    }
+                />
+                <Route
+                    path={paths.offer}
+                    element={
+                        <PrivateRoute>
+                            <Offer />
                         </PrivateRoute>
                     }
                 />

@@ -3,7 +3,7 @@ import VirtualList from 'rc-virtual-list'
 import { List, Avatar, message } from 'antd'
 import { FileSyncOutlined } from '@ant-design/icons'
 import { CardBasic } from '@components/Card'
-import AddPinnedOfferModal from '@containers/AddPinnedOfferModal'
+import OfferAddPinnedModal from '@containers/Offer/OfferAddPinnedModal'
 import ButtonCircleRemove from '@components/Button/ButtonCircleRemove'
 
 const fakeDataUrl =
@@ -35,7 +35,7 @@ export default function OfferPinnedList() {
         <CardBasic
             title="Pinned Offers"
             bordered={false}
-            extra={[<AddPinnedOfferModal />]}
+            extra={[<OfferAddPinnedModal />]}
         >
             <List>
                 <VirtualList

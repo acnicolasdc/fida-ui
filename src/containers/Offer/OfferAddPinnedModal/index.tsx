@@ -2,7 +2,7 @@ import React from 'react'
 import { Modal } from 'antd'
 import ButtonAdd from '@components/Button/ButtonAdd'
 
-export default function AddPinnedOfferModal() {
+export default function OfferAddPinnedModal() {
     const [visible, setVisible] = React.useState(false)
     const [confirmLoading, setConfirmLoading] = React.useState(false)
     const [modalText, setModalText] = React.useState('Content of the modal')

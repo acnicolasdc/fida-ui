@@ -1,6 +1,6 @@
 import { Col, Card, Divider } from 'antd'
-import UserStatics from '@containers/UserStatics'
-import OfferPinnedList from '@containers/OfferPinnedList'
+import UserStatics from '@containers/User/UserStatics'
+import OfferPinnedList from '@containers/Offer/OfferPinnedList'
 import ContactDirectory from '@containers/ContactDirectory'
 
 import { Layout } from '@components/Layout'

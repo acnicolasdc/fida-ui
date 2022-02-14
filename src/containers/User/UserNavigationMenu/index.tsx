@@ -6,7 +6,7 @@ export default function UserNavigationMenu() {
     return (
         <Menu>
             <NavItem to={paths.dashboard}>Dashboard</NavItem>
-            <NavItem to="/faq">Offers</NavItem>
+            <NavItem to={paths.offer}>Offers</NavItem>
             <NavItem to="/faqe">Database</NavItem>
         </Menu>
     )
