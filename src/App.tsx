@@ -1,6 +1,11 @@
 import Routes from '@routes'
+import AuthProvider from '@providers/Auth'
 import './App.less'
 
 export default function App() {
-    return <Routes />
+    return (
+        <AuthProvider>
+            <Routes />
+        </AuthProvider>
+    )
 }

@@ -1,13 +1,17 @@
 import { Input, Button } from 'antd'
+import { useNavigate } from 'react-router-dom'
+import { EPaths } from '@routes'
 import { AuthForm } from './auth.style'
 
 export default function Auth() {
+    const navigate = useNavigate()
     return (
         <AuthForm
             name="authentication"
             layout="vertical"
             autoComplete="off"
             size="large"
+            onFinish={() => navigate(EPaths.dashboard)}
         >
             <AuthForm.Item
                 name="username"

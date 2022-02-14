@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import { EPaths } from '@routes'
-import Auth from '@containers/Auth'
+import Auth from '@containers/User/UserAuth'
 import { SubTitle, Text } from '@components/Typography'
 import { Container, ContentForm, Logo } from './signIn.style'
 

@@ -11,7 +11,11 @@
             "@providers": ["providers"],
             "@providers/*": ["providers/*"],
             "@routes": ["routes"],
-            "@routes/*": ["routes/*"]
+            "@routes/*": ["routes/*"],
+            "@utils": ["utils"],
+            "@utils/*": ["utils/*"],
+            "@hooks": ["hooks"],
+            "@hooks/*": ["hooks/*"]
         }
     }
 }
