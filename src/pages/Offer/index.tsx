@@ -1,6 +1,7 @@
-import { Button, Col } from 'antd'
+import { Col } from 'antd'
 import OfferSideMenuStatus from '@containers/Offer/OfferSideMenuStatus'
 import OfferList from '@containers/Offer/OfferList'
+import OfferCreate from '@containers/Offer/OfferCreate'
 import { LayoutRow } from '@components/Layout'
 import { SubTitle } from '@components/Typography'
 import useGetComponentSize from '@hooks/useGetComponentSize'
@@ -14,7 +15,7 @@ export default function Offer() {
             <OfferMain>
                 <OfferHeader>
                     <SubTitle>Offer List</SubTitle>
-                    <Button type="primary">Create Offer</Button>
+                    <OfferCreate />
                 </OfferHeader>
                 <OfferContent gutter={16} ref={ref}>
                     <Col span={14}>
