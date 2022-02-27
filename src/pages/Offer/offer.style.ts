@@ -1,4 +1,4 @@
-import { Layout, Row } from 'antd'
+import { Layout, Col, Row } from 'antd'
 import styled from 'styled-components'
 
 export const OfferMain = styled(Layout)`
@@ -8,10 +8,17 @@ export const OfferContent = styled(Row)`
     height: 100%;
 `
 
+export const ColGutter = styled(Col)`
+    & > *:not(:last-child) {
+        margin-bottom: 16px;
+    }
+`
+
 export const OfferHeader = styled.div`
     width: 100%;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    margin-bottom: 16px;
 `

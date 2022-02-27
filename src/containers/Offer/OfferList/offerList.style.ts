@@ -1,5 +1,5 @@
 import styled from 'styled-components'
 
-export const ItemSpace = styled.div`
-    margin-top: 10px;
+export const FilterContent = styled.div`
+    margin-bottom: 20px;
 `
