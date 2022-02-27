@@ -48,7 +48,12 @@ export default function OfferPinnedList() {
                     {(item: any) => (
                         <List.Item key={item.email}>
                             <List.Item.Meta
-                                avatar={<Avatar icon={<FileSyncOutlined />} />}
+                                avatar={
+                                    <Avatar
+                                        icon={<FileSyncOutlined />}
+                                        style={{ backgroundColor: '#87d068' }}
+                                    />
+                                }
                                 title={
                                     <a href="https://ant.design">
                                         {item.name.last}

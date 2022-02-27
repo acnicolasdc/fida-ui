@@ -9,7 +9,11 @@ export default function CardOffer() {
         <CardBasic
             title={
                 <Space size="middle">
-                    <Avatar shape="square" icon={<FileSyncOutlined />} />
+                    <Avatar
+                        shape="square"
+                        icon={<FileSyncOutlined />}
+                        style={{ backgroundColor: '#87d068' }}
+                    />
                     React Developer P44
                 </Space>
             }

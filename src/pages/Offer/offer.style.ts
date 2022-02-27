@@ -13,7 +13,13 @@ export const ColGutter = styled(Col)`
         margin-bottom: 16px;
     }
 `
-
+export const SpaceBetween = styled.div`
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+`
 export const OfferHeader = styled.div`
     width: 100%;
     display: flex;

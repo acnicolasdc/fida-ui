@@ -14,7 +14,7 @@ export default function UserStatics() {
                         title="Developers Hired"
                         value={20}
                         precision={0}
-                        valueStyle={{ color: '#3f8600' }}
+                        valueStyle={{ color: '#87d068' }}
                         prefix={<FileDoneOutlined />}
                     />
                 </Card>
@@ -25,7 +25,7 @@ export default function UserStatics() {
                         title="Ongoing Process"
                         value={9}
                         precision={0}
-                        valueStyle={{ color: '#cf8413' }}
+                        valueStyle={{ color: '#eb9616' }}
                         prefix={<RedoOutlined />}
                     />
                 </Card>
@@ -36,7 +36,7 @@ export default function UserStatics() {
                         title="Open Offers"
                         value={4}
                         precision={0}
-                        valueStyle={{ color: '#1394cf' }}
+                        valueStyle={{ color: '#108ee9' }}
                         prefix={<FolderOpenOutlined />}
                     />
                 </Card>
